@@ -1,6 +1,8 @@
 frontend-nanodegree-arcade-game
 ===============================
+Steps to Play:
 
-Students should use this [rubric](https://www.udacity.com/course/viewer/#!/c-nd001/l-2696458597/m-2687128535) for self-checking their submission.
-
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+1.Start the game by opening index.html in a browser.
+2.Reaching the water is the goal of the player without hitting the bugs.
+3.Use arrow keys to move the player.
+4.Reach water, enjoy the game !!

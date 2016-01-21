@@ -80,7 +80,37 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
+    }
+	
+	function checkCollisions() {
+
+			/**
+			* Check for the collision of two entities.
+			* Function accepts two arguments.
+			*/
+			function collision(a, b) {
+			  return a.x < b.x + b.width &&
+			         a.x + a.width > b.x &&
+			         a.y < b.y + b.height &&
+			         a.y + a.height > b.y;
+			}
+
+    	/* Check enemy collisions. 
+    	 * If there is a collision, reset the player's position 
+    	 * and update the players lives or reset the game. 
+    	 */ 
+    	allEnemies.forEach(function(enemy) {
+  			if(collision(player, enemy)) {
+  			
+						/* Reset the players position.
+						 * The Player class can be found in app.js
+						 */	
+						
+						return player.resetPlayerPosition();
+
+  			}
+    	});
     }
 
     /* This is called by the update function and loops through all of the
